@@ -1,3 +1,8 @@
 <nav class="navbar">
-    <h2 class="text"> Заказ пиццы </h2>
+    <h2 class="text" style="margin-left: 30px"> Заказ пиццы </h2>
+    {{#if showReview}}
+        <a href="/review" style="margin-right: 30px">Отзыв</a>
+    {{else}}
+        <a href="/review" style="margin-right: 30px; visibility: hidden;">Отзыв</a>
+    {{/if}}
 </nav>

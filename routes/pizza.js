@@ -13,7 +13,8 @@ router.get('/pizza/:id', async (req, resp) => {
 
     resp.render('pizzaOrder', {
         title: pizzaObj.name,
-        pizza: pizzaObj
+        pizza: pizzaObj,
+        showReview: true
     })
 })
 

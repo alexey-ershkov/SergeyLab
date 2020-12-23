@@ -9,7 +9,8 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 router.get('/review', (req, resp) => {
     resp.render('review', {
-        title: "Отзыв"
+        title: "Отзыв",
+        showReview: false
     })
 })
 

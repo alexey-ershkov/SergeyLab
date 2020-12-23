@@ -12,7 +12,8 @@ router.get('/', async (req, resp) => {
 
     resp.render('index', {
         title: "Выбор пиццы",
-        pizzas
+        pizzas,
+        showReview: true
     })
 })
 
