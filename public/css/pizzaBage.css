@@ -1,0 +1,46 @@
+.pizzaBage {
+    text-decoration: none;
+    color: black;
+    width: 13vw;
+    height: 20vh;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.pizzaBage:hover {
+    transition: box-shadow 400ms;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.pizzaImg {
+    display: block;
+    position: relative;
+    width: 100px;
+    vertical-align: middle;
+    height: 100px;
+    grid-area: img;
+    border-radius: 20%;
+    margin-top: 10px;
+}
+
+.pizzaInfo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.pizzaName {
+    text-align: center;
+}
+
+.pizzaCost {
+    text-align: center;
+    width: 50px;
+}

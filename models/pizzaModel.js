@@ -4,7 +4,7 @@ const pizzaScheme = new Schema({
     name: String,
     imgId: Number,
     cost: Number,
-    addComponents: [String]
+    addComponents: [Object]
 },{collection: 'pizza'})
 
 module.exports = model('pizza', pizzaScheme)

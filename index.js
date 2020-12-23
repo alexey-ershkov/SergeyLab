@@ -1,17 +1,19 @@
-const express = require('express')
-const exphbs = require('express-handlebars')
-const mongoose = require('mongoose')
+let express = require('express')
+let exphbs = require('express-handlebars')
+let mongoose = require('mongoose')
 
 
-const pizzaRoutes = require('./routes/pizza/routes')
+let mainRoutes = require('./routes/main')
+let pizzaRoutes = require('./routes/pizza')
+let reviewRoutes = require('./routes/review')
 
 
-const PORT = 3000;
-const dbUrl = 'mongodb+srv://app:mongo_app@sergeylabcluster.0bkqp.mongodb.net/pizzaDelivery'
+let PORT = 3000;
+let dbUrl = 'mongodb+srv://app:mongo_app@sergeylabcluster.0bkqp.mongodb.net/pizzaDelivery'
 
-const app = express();
+let app = express();
 
-const hbs = exphbs.create({
+let hbs = exphbs.create({
     extname: 'hbs',
     defaultLayout: 'main'
 });
@@ -20,12 +22,19 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', 'templates');
 
+app.use(mainRoutes)
 app.use(pizzaRoutes)
+app.use(reviewRoutes)
+app.use(express.static(__dirname + '/public'));
+
 
 mongoose.connect(dbUrl,{
     useUnifiedTopology: true,
     useNewUrlParser: true
-}).then(() => app.listen(PORT, () => {
+}).then(() => app.listen(PORT, async() => {
         console.log(`Server started on port ${PORT}`)
     }))
     .catch(err => console.log(err))
+
+
+
