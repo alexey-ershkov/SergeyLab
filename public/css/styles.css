@@ -19,7 +19,7 @@
     justify-content: space-between;
 }
 
-.navbar a {
+.navbarButton {
     text-decoration: none;
     color: azure;
     border: azure 3px solid;
@@ -27,7 +27,12 @@
     border-radius: 20px;
 }
 
-.navbar a:hover {
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+.navbarButton:hover {
     transition: background-color 400ms;
     color: #bf360c;
     background-color: azure;

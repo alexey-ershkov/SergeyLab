@@ -59,13 +59,7 @@
 }
 
 .orderInfo {
-
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 15vmin;
-
-    text-align: center;
+    margin-left: 5px;
     font-size: 28px;
 }
 
@@ -106,4 +100,19 @@
     width: 70%;
 }
 
-.fo
+.pizzaOrder {
+
+    flex-basis: 50%;
+}
+
+.compName {
+    width: 20vmin;
+    margin: 0;
+}
+
+.orderInfoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+}

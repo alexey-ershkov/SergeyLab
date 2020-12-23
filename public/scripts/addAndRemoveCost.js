@@ -2,7 +2,7 @@ let minusButtons = document.getElementsByClassName("minus");
 let plusButtons = document.getElementsByClassName("plus");
 let currCost = document.getElementById("currCost");
 let costForm = document.getElementById('cost')
-let addForm = document.getElementById('add')
+let addForm = document.getElementById('additional')
 
 
 let handleMinusClick = event => {

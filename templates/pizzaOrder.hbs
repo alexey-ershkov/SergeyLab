@@ -1,15 +1,17 @@
 <div class="orderContainer">
     <div class="pizzaOrder">
-        <img src="/images/{{pizza.imgId}}.jpg" alt="pizza.imgId" class="orderImg">
         <div class="orderInfoContainer">
+            <img src="/images/{{pizza.imgId}}.jpg" alt="pizza.imgId" class="orderImg">
             <div class="orderInfo">
                 <p>{{pizza.name}}</p>
                 <p>Стоимость: <span id="currCost">{{pizza.cost}}</span></p>
             </div>
+        </div>
+        <div >
             <div>
                 <ul class="components">
                     {{#each pizza.addComponents}}
-                        <li>{{name}} <span>{{cost}}</span>₽
+                        <li><p class="compName">{{name}} <span>{{cost}}</span>₽</p>
                             <div class="addGroup">
                                 <button type="button" class="minus addButton" name={{name}} cost={{cost}}>
                                     -
