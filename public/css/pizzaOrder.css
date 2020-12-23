@@ -1,0 +1,118 @@
+.orderContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formOrder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formField {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 12vmin;
+}
+
+.formField label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #bf360c;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.formField input {
+    margin: 10px;
+    height: 8vmin;
+}
+
+.formOrder button {
+    background-color: #bf360c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 20px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.orderImg {
+    height: 30vmin;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.orderInfo {
+    margin-left: 5px;
+    font-size: 28px;
+}
+
+.components{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.components li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.addButton {
+    background-color: #bf360c;
+    border: none;
+    color: white;
+    width: 5vmin;
+    height: 5vmin;
+    text-align: center;
+    vertical-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.addGroup {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.pizzaOrder {
+
+    flex-basis: 50%;
+}
+
+.compName {
+    width: 20vmin;
+    margin: 0;
+}
+
+.orderInfoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+}

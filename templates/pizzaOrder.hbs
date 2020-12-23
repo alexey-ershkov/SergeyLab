@@ -1,0 +1,50 @@
+<div class="orderContainer">
+    <div class="pizzaOrder">
+        <div class="orderInfoContainer">
+            <img src="/images/{{pizza.imgId}}.jpg" alt="pizza.imgId" class="orderImg">
+            <div class="orderInfo">
+                <p>{{pizza.name}}</p>
+                <p>Стоимость: <span id="currCost">{{pizza.cost}}</span></p>
+            </div>
+        </div>
+        <div >
+            <div>
+                <ul class="components">
+                    {{#each pizza.addComponents}}
+                        <li><p class="compName">{{name}} <span>{{cost}}</span>₽</p>
+                            <div class="addGroup">
+                                <button type="button" class="minus addButton" name={{name}} cost={{cost}}>
+                                    -
+                                </button>
+                                <span id="count-{{name}}"> 0 </span>
+                                <button type="button" class="plus addButton" name={{name}} cost={{cost}}>
+                                    +
+                                </button>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <form action="/pizza" method="post" class="formOrder">
+        <div class="formField">
+            <label for="address">Адрес доставки</label>
+            <input required type="text" name="address" id="address">
+        </div>
+        <div class="formField">
+            <label for="name">Ваше имя</label>
+            <input required type="text" name="name" id="name">
+        </div>
+        <div class="formField">
+
+            <label for="phone">Ваш телефон</label>
+            <input required type="tel" name="phone" id="phone">
+        </div>
+        <input type="hidden" name="cost" id="cost" value={{pizza.cost}}>
+        <input type="hidden" name="id" id="id" value="{{pizza._id}}">
+        <input type="hidden" name="additional" id="additional" value="">
+        <button type="submit">Оформить заказ</button>
+    </form>
+</div>
+<script type="text/javascript" src="/scripts/addAndRemoveCost.js"></script>
