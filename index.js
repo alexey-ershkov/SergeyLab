@@ -9,7 +9,7 @@ let reviewRoutes = require('./routes/review')
 
 
 let PORT = 3000;
-let dbUrl = 'mongodb+srv://app:mongo_app@sergeylabcluster.0bkqp.mongodb.net/pizzaDelivery'
+let dbUrl = 'mongodb+srv://app:mongo_app@cluster0.8rsxq.mongodb.net/pizzaDelivery'
 
 let app = express();
 
